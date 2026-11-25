@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BMW Premium | Автомобили мечты</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:#080b12;color:white;font-family:Arial,sans-serif}
+header{height:75px;padding:0 7%;display:flex;align-items:center;justify-content:space-between;background:#0c111c;border-bottom:1px solid #202a3b;position:sticky;top:0;z-index:5}
+.logo{font-size:27px;font-weight:bold;letter-spacing:3px;color:#39a9ff}
+nav a{color:white;text-decoration:none;margin-left:22px;font-size:14px}
+.hero{min-height:570px;display:flex;align-items:center;padding:65px 8%;background:linear-gradient(90deg,#080b12 5%,rgba(8,11,18,.75) 48%,rgba(8,11,18,.1)),url('https://images.unsplash.com/photo-1555215695-3004980ad54e?w=1600') center/cover}
+.hero-content{max-width:550px}
+.tag{color:#45b4ff;letter-spacing:4px;font-size:13px}
+h1{font-size:clamp(42px,7vw,76px);margin:20px 0;line-height:1.05}
+.hero p{color:#c3cad5;line-height:1.7;margin-bottom:30px}
+.btn{display:inline-block;background:#1689ed;color:white;padding:15px 25px;border-radius:5px;text-decoration:none;font-weight:bold}
+section{padding:75px 8%}
+.section-title{text-align:center;font-size:34px;margin-bottom:40px}
+.section-title span{color:#39a9ff}
+.about{text-align:center;color:#adb8c8;line-height:1.8;max-width:750px;margin:auto}
+.cars{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px}
+.card{background:#111a29;border:1px solid #26364b;border-radius:12px;overflow:hidden;transition:.3s}
+.card:hover{transform:translateY(-7px);border-color:#1689ed}
+.card img{width:100%;height:190px;object-fit:cover}
+.card-content{padding:20px}
+.card h3{font-size:22px;margin-bottom:10px}
+.card p{color:#aeb8c8;font-size:14px;line-height:1.6;margin-bottom:15px}
+.price{color:#42aaff;font-weight:bold;margin-bottom:18px}
+.card a{color:#fff;text-decoration:none;background:#147fd5;padding:11px 16px;display:inline-block;border-radius:5px;font-size:14px}
+.contact{text-align:center;background:#101827}
+.contact p{color:#bac5d5;margin:15px 0 25px}
+footer{text-align:center;padding:25px;color:#8290a5;background:#080b12;font-size:13px}
+@media(max-width:600px){
+header{padding:0 5%;height:65px}
+.logo{font-size:21px}
+nav a{margin-left:10px;font-size:12px}
+.hero{min-height:520px;padding:45px 7%}
+section{padding:60px 6%}
+.section-title{font-size:28px}
+}
+</style>
+</head>
+<body>
+
+<header>
+<div class="logo">BMW PREMIUM</div>
+<nav>
+<a href="#home">Главная</a>
+<a href="#cars">Авто</a>
+<a href="#contact">Контакты</a>
+</nav>
+</header>
+
+<div class="hero" id="home">
+<div class="hero-content">
+<div class="tag">THE ULTIMATE DRIVING EXPERIENCE</div>
+<h1>Создан для<br>твоей мечты.</h1>
+<p>Открой мир BMW. Современные технологии, невероятный дизайн и удовольствие от каждой поездки.</p>
+<a href="#cars" class="btn">Смотреть автомобили →</a>
+</div>
+</div>
+
+<section id="about">
+<h2 class="section-title">Почему <span>BMW?</span></h2>
+<p class="about">BMW — это сочетание инноваций, динамики и элегантного дизайна. Познакомься с легендарными автомобилями, которые вдохновляют миллионы людей по всему миру.</p>
+</section>
+
+<section id="cars">
+<h2 class="section-title">Наш <span>каталог</span></h2>
+<div class="cars">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?w=700" alt="BMW M4">
+<div class="card-content">
+<h3>BMW M4</h3>
+<p>Спортивный характер и узнаваемый дизайн.</p>
+<div class="price">Цена по запросу</div>
+<a href="#contact">Подробнее</a>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1556189250-72ba954cfc2b?w=700" alt="BMW">
+<div class="card-content">
+<h3>BMW Series 5</h3>
+<p>Комфорт, стиль и современные технологии.</p>
+<div class="price">Цена по запросу</div>
+<a href="#contact">Подробнее</a>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c?w=700" alt="BMW">
+<div class="card-content">
+<h3>BMW X5</h3>
+<p>Мощный характер и свобода движения.</p>
+<div class="price">Цена по запросу</div>
+<a href="#contact">Подробнее</a>
+</div>
+</div>
+
+</div>
+</section>
+
+<section class="contact" id="contact">
+<h2 class="section-title">Свяжитесь <span>с нами</span></h2>
+<p>Хотите узнать больше об автомобилях BMW?</p>
+<a class="btn" href="mailto:example@email.com">Написать нам</a>
+</section>
+
+<footer>
+© 2026 BMW Premium — учебный демонстрационный проект. Неофициальный сайт.
+</footer>
+
+</body>
+</html>
+
