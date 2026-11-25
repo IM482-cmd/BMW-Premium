@@ -1,59 +1,82 @@
-
 <!DOCTYPE html>
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>BMW Premium | Автосалон</title>
+<title>BMW PREMIUM | Luxury Cars</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{background:#080b12;color:#fff;font-family:Arial,sans-serif}
-header{height:75px;padding:0 7%;display:flex;align-items:center;justify-content:space-between;background:#0b111d;border-bottom:1px solid #26364b;position:sticky;top:0;z-index:10}
-.logo{font-size:25px;font-weight:900;letter-spacing:3px;color:#39aaff}
-nav{display:flex;gap:22px}
+header{
+position:sticky;top:0;z-index:10;
+background:#0b111c;padding:18px 6%;
+display:flex;justify-content:space-between;
+align-items:center;border-bottom:1px solid #26364b
+}
+.logo{font-size:23px;font-weight:900;letter-spacing:3px;color:#39aaff}
+nav{display:flex;gap:20px}
 nav a{color:#fff;text-decoration:none;font-size:14px}
 nav a:hover{color:#39aaff}
-.hero{min-height:590px;display:flex;align-items:center;padding:70px 8%;background:linear-gradient(90deg,#080b12 5%,rgba(8,11,18,.75) 55%,rgba(8,11,18,.1)),url('https://images.unsplash.com/photo-1555215695-3004980ad54e?w=1600') center/cover}
-.hero-content{max-width:600px;animation:appear 1s ease}
-.tag{color:#39aaff;letter-spacing:4px;font-size:12px}
-h1{font-size:clamp(43px,7vw,76px);line-height:1.08;margin:22px 0}
-.hero p{color:#c0c9d7;font-size:17px;line-height:1.8;margin-bottom:30px}
-.btn{display:inline-block;background:#1689ed;color:white;padding:15px 25px;border-radius:5px;text-decoration:none;font-weight:bold;transition:.3s}
+.hero{
+min-height:600px;display:flex;align-items:center;
+padding:65px 8%;
+background:
+linear-gradient(90deg,#080b12 5%,rgba(8,11,18,.8) 55%,rgba(8,11,18,.2)),
+url('https://commons.wikimedia.org/wiki/Special:FilePath/2021_BMW_M4_Competition_Coup%C3%A9.jpg')
+center/cover;
+}
+.hero-content{max-width:600px;animation:fade 1s ease}
+.tag{color:#40b5ff;letter-spacing:5px;font-size:12px}
+h1{font-size:clamp(42px,7vw,75px);line-height:1.08;margin:24px 0}
+.hero p{color:#c3cbd8;font-size:17px;line-height:1.8;margin-bottom:30px}
+.btn{
+display:inline-block;background:#1689ed;color:white;
+padding:15px 25px;border-radius:5px;
+text-decoration:none;font-weight:bold;transition:.3s
+}
 .btn:hover{background:#006acb;transform:translateY(-3px)}
-section{padding:80px 8%}
-.section-title{text-align:center;font-size:35px;margin-bottom:15px}
-.section-title span{color:#39aaff}
-.subtitle{text-align:center;color:#99a8bb;margin-bottom:40px}
-.about{text-align:center;color:#b6c2d2;line-height:1.9;max-width:750px;margin:auto}
-.cars{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:24px}
-.card{background:#111a29;border:1px solid #26364b;border-radius:12px;overflow:hidden;transition:.35s;opacity:0;transform:translateY(25px)}
+section{padding:80px 7%}
+.heading{text-align:center;font-size:35px;margin-bottom:15px}
+.heading span{color:#39aaff}
+.subtitle{text-align:center;color:#9baabd;margin-bottom:40px}
+.about{text-align:center;max-width:750px;margin:auto;color:#b6c2d2;line-height:1.9}
+.cars{
+display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+gap:24px
+}
+.card{
+background:#111a29;border:1px solid #26364b;
+border-radius:12px;overflow:hidden;
+transition:.35s;opacity:0;transform:translateY(25px)
+}
 .card.show{opacity:1;transform:translateY(0)}
 .card:hover{transform:translateY(-8px);border-color:#1689ed}
-.card img{width:100%;height:200px;object-fit:cover;display:block}
+.card img{width:100%;height:210px;object-fit:cover;display:block}
 .card-content{padding:22px}
-.card h3{font-size:23px;margin-bottom:10px}
-.card p{font-size:14px;color:#aeb9ca;line-height:1.7;min-height:48px}
-.price{color:#48aaff;font-weight:bold;margin:17px 0}
-.card a{display:inline-block;background:#1689ed;color:#fff;text-decoration:none;padding:11px 17px;border-radius:5px;font-size:14px}
+.card h3{font-size:23px;margin-bottom:12px}
+.card p{color:#aeb9ca;font-size:14px;line-height:1.7}
+.price{color:#42aaff;font-weight:bold;margin:17px 0}
+.card a{
+display:inline-block;background:#1689ed;color:#fff;
+text-decoration:none;padding:11px 17px;border-radius:5px
+}
 .contact{text-align:center;background:#101a2a}
-.contact p{color:#bac5d5;margin:18px 0 27px;line-height:1.7}
-.whatsapp{background:#168a52}
-.whatsapp:hover{background:#087340}
-footer{text-align:center;padding:27px;color:#8493a8;background:#080b12;font-size:13px;line-height:1.8}
-@keyframes appear{
-from{opacity:0;transform:translateY(30px)}
+.contact p{color:#bac5d5;margin:20px 0 28px;line-height:1.8}
+footer{text-align:center;padding:30px;color:#8493a8;font-size:13px;line-height:2}
+@keyframes fade{
+from{opacity:0;transform:translateY(25px)}
 to{opacity:1;transform:translateY(0)}
 }
 @media(max-width:600px){
-header{padding:0 4%;height:65px}
-.logo{font-size:18px;letter-spacing:2px}
+header{padding:17px 4%}
+.logo{font-size:17px;letter-spacing:2px}
 nav{gap:10px}
 nav a{font-size:11px}
 .hero{min-height:540px;padding:45px 7%}
 .hero p{font-size:15px}
-section{padding:65px 6%}
-.section-title{font-size:29px}
+section{padding:60px 6%}
+.heading{font-size:29px}
 }
 </style>
 </head>
@@ -72,57 +95,61 @@ section{padding:65px 6%}
 <div class="hero-content">
 <div class="tag">THE ULTIMATE DRIVING EXPERIENCE</div>
 <h1>Больше чем<br>просто автомобиль.</h1>
-<p>Открой мир BMW. Инновации, мощность и элегантный дизайн в каждой детали.</p>
+<p>Открой мир BMW. Мощность, инновации и элегантный дизайн. Найди автомобиль своей мечты.</p>
 <a href="#cars" class="btn">Выбрать автомобиль →</a>
 </div>
 </div>
 
 <section id="about">
-<h2 class="section-title">Почему <span>BMW?</span></h2>
-<p class="about">BMW объединяет инженерные инновации, узнаваемый дизайн и удовольствие от вождения. Выбери автомобиль, который отражает твой стиль.</p>
+<h2 class="heading">Почему <span>BMW?</span></h2>
+<p class="about">
+BMW — это сочетание инженерного мастерства,
+современных технологий и удовольствия от вождения.
+Выбери модель, которая подходит именно тебе.
+</p>
 </section>
 
 <section id="cars">
-<h2 class="section-title">Наш <span>каталог</span></h2>
-<p class="subtitle">Выбери свою модель BMW</p>
+<h2 class="heading">Наш <span>каталог</span></h2>
+<p class="subtitle">Открой коллекцию BMW</p>
 
 <div class="cars">
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?w=800" alt="Спортивный автомобиль">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/2021_BMW_M4_Competition_Coup%C3%A9.jpg" alt="BMW M4">
 <div class="card-content">
 <h3>BMW M4</h3>
-<p>Спортивный характер и яркий дизайн.</p>
+<p>Спортивное купе с ярким характером и динамичным дизайном.</p>
 <div class="price">Цена по запросу</div>
 <a href="#contact">Подробнее →</a>
 </div>
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1556189250-72ba954cfc2b?w=800" alt="Автомобиль BMW">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/2024_BMW_M5.jpg" alt="BMW M5">
 <div class="card-content">
 <h3>BMW M5</h3>
-<p>Динамика и комфорт в одном автомобиле.</p>
+<p>Мощный спортивный седан с современными технологиями.</p>
 <div class="price">Цена по запросу</div>
 <a href="#contact">Подробнее →</a>
 </div>
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c?w=800" alt="Автомобиль BMW">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/BMW_X5_%2847356480251%29.jpg" alt="BMW X5">
 <div class="card-content">
 <h3>BMW X5</h3>
-<p>Просторный и стильный внедорожник.</p>
+<p>Премиальный внедорожник для комфорта и путешествий.</p>
 <div class="price">Цена по запросу</div>
 <a href="#contact">Подробнее →</a>
 </div>
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=800" alt="Премиальный автомобиль">
+<img src="https://commons.wikimedia.org/wiki/Special:FilePath/BMW_i7_IMG001.jpg" alt="BMW i7">
 <div class="card-content">
 <h3>BMW i7</h3>
-<p>Современная роскошь и электрические технологии.</p>
+<p>Электрическая роскошь и технологии нового поколения.</p>
 <div class="price">Цена по запросу</div>
 <a href="#contact">Подробнее →</a>
 </div>
@@ -132,25 +159,26 @@ section{padding:65px 6%}
 </section>
 
 <section class="contact" id="contact">
-<h2 class="section-title">Свяжитесь <span>с нами</span></h2>
-<p>Хотите узнать подробности об автомобиле?<br>Напишите нам в WhatsApp.</p>
-<a class="btn whatsapp" href="https://wa.me/998901234567" target="_blank">Написать в WhatsApp ↗</a>
+<h2 class="heading">Свяжитесь <span>с нами</span></h2>
+<p>Хотите узнать больше о понравившейся модели BMW?</p>
+<a class="btn" href="mailto:contact@example.com">Написать нам →</a>
 </section>
 
 <footer>
-© 2026 BMW Premium<br>
-Демонстрационный проект. Неофициальный сайт BMW.
+BMW PREMIUM © 2026<br>
+Демонстрационный проект. Неофициальный сайт BMW.<br>
+Фотографии: Wikimedia Commons.
 </footer>
 
 <script>
-const observer = new IntersectionObserver(entries=>{
+const observer=new IntersectionObserver(entries=>{
 entries.forEach(entry=>{
 if(entry.isIntersecting){
 entry.target.classList.add('show');
 observer.unobserve(entry.target);
 }
 });
-},{threshold:0.12});
+},{threshold:0.1});
 
 document.querySelectorAll('.card').forEach(card=>{
 observer.observe(card);
@@ -159,3 +187,4 @@ observer.observe(card);
 
 </body>
 </html>
+
